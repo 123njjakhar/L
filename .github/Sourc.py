@@ -1,1 +1,1 @@
-from Legendbot import updates.soon
+from plugins import Legendbot
