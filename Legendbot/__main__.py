@@ -57,7 +57,7 @@ async def startup_process():
         LOGS.error(f"{str(e)}")
         sys.exit()
 
-        
+
 async def externalrepo():
     if Config.EXTERNAL_REPO:
         await install_externalrepo(
@@ -66,9 +66,7 @@ async def externalrepo():
     if Config.VCMODE:
         await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "legendvc")
 
-   
-       
-        
+
 legend.loop.run_until_complete(startup_process())
 
 if len(sys.argv) not in (1, 3, 4):

@@ -6,7 +6,7 @@ from datetime import timedelta
 from pathlib import Path
 
 from telethon import Button, functions, types, utils
-from telethon.tl.functions.channels import JoinChannelRequest, LeaveChannelRequest
+from telethon.tl.functions.channels import JoinChannelRequest
 
 from Legendbot import BOTLOG, BOTLOG_CHATID, PM_LOGGER_GROUP_ID, legendversion
 
