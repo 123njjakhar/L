@@ -5,6 +5,7 @@ from ..helpers.utils import _format
 
 menu_category = "tools"
 
+
 # yaml_format is ported from uniborg
 @legend.legend_cmd(
     pattern="json$",

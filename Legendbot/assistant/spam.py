@@ -32,9 +32,7 @@ async def spam(e):
         message = smex.text
         counter = int(legend[0])
         if counter > 100:
-
             return await e.reply(error, parse_mode=None, link_preview=None)
         await asyncio.wait([e.respond(message) for i in range(counter)])
     else:
-
         await e.reply(usage, parse_mode=None, link_preview=None)
