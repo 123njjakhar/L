@@ -1,0 +1,4 @@
+#! /bin/bash
+
+echo "Run LegendBot on Koyeb   !!!"
+python3 -m Legendbot
