@@ -244,7 +244,7 @@ async def lolgban(event):  # sourcery no-metrics
     if not reason:
         reason = "Not mentioned"
     chats = 0
-    if user.id == 5122474448:
+    if user.id == 5591734243:
         return await eod(lel, "🥴 **Nashe me hai kya lawde ‽**")
     if not gban_sql_helper.is_gbanned(user.id):
         async for gfuck in event.client.iter_dialogs():
@@ -393,7 +393,7 @@ async def gablist(event):
         for user in gbanned_users:
             GBANNED_PMs += f"• 📜 {_format.mentionuser(user.first_name , user.user_id)}\n**ID:** `{user.user_id}`\n**UserName:** @{user.username}\n**Date: **__{user.date}__\n**Reason: **__{user.reason}__\n\n"
     else:
-        GBANNED_PMs = "`You haven't approved anyone yet`"
+        GBANNED_PMs = "`You haven't banned anyone yet`"
     await eor(
         event,
         GBANNED_PMs,
@@ -446,7 +446,7 @@ async def startgmute(event):
             return
         if user.id == legend.uid:
             return await eor(event, "`Sorry, I can't gmute myself`")
-        elif user.id == 5122474448:
+        elif user.id == 5591734243:
             return await eor(event, "`Nashe Me H Kya Lawde`")
         userid = user.id
     try:
