@@ -91,18 +91,3 @@ async def when(event):
     else:
         result = event.date
     await eor(event, f"**This message was posted on :** `{yaml_format(result)}`")
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-PLUGINS/execmod.py at main · LEGEND-AI/PLUGINS
