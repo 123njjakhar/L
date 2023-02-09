@@ -40,7 +40,9 @@ async def ping(event):
         legendevent = await eor(event, "<b><i>⚡ Pong! ⚡</b></i>", "html")
         end = datetime.now()
         ms = (end - start).microseconds / 1000
-        ping_temp = (gvarstatus("PING_TEMPLATE")) or "__**☞ Pong**__\n➥ `{ping}` **ms**\n➥ __**Bot of **__{mention}"
+        ping_temp = (
+            gvarstatus("PING_TEMPLATE")
+        ) or "__**☞ Pong**__\n➥ `{ping}` **ms**\n➥ __**Bot of **__{mention}"
         sweetie = gvarstatus("PING_IMG")
         caption = ping_temp.format(
             mention=mention,
@@ -59,6 +61,7 @@ async def ping(event):
             await legendevent.delete()
         else:
             await eor(legendevent, caption)
+
 
 @legend.legend_cmd(
     pattern="hping$",
