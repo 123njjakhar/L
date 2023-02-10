@@ -9,8 +9,8 @@ import re
 
 from ..Config import Config
 from ..core.managers import eor
-from . import LyricsGen, legend
-
+from . import legend
+from ..helpers.function.musictool import LyricsGen
 GENIUS = Config.GENIUS_API_TOKEN
 
 menu_category = "extra"
