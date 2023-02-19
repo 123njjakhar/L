@@ -74,7 +74,7 @@ async def on_plug_in_callback_query_handler(event):
         (Button.inline(f"👨‍💻 Main Menu", data="mainmenu"),),
     ]
     await event.edit(
-        f"💝『{mention}』💝",
+        f"🔱『{mention}』🔱",
         buttons=buttons,
         link_preview=False,
     )
@@ -718,10 +718,10 @@ async def on_plug_in_callback_query_handler(event):
 
 @legend.tgbot.on(CallbackQuery(data=re.compile(b"check")))
 async def on_plugin_callback_query_handler(event):
-    text = f"𝙿𝚕𝚞𝚐𝚒𝚗𝚜: {len(PLG_INFO)}\
-        \n𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜: {len(CMD_INFO)}\
-        \n\n{tr}𝚑𝚎𝚕𝚙 <𝚙𝚕𝚞𝚐𝚒𝚗> : 𝙵𝚘𝚛 𝚜𝚙𝚎𝚌𝚒𝚏𝚒𝚌 𝚙𝚕𝚞𝚐𝚒𝚗 𝚒𝚗𝚏𝚘.\
-        \n{tr}𝚑𝚎𝚕𝚙 -𝚌 <𝚌𝚘𝚖𝚖𝚊𝚗𝚍> : 𝙵𝚘𝚛 𝚊𝚗𝚢 𝚌𝚘𝚖𝚖𝚊𝚗𝚍 𝚒𝚗𝚏𝚘.\
+    text = f"Plugis: {len(PLG_INFO)}\
+        \nCommands: {len(CMD_INFO)}\
+        \n\n{tr}help <plugin> : for specific plugin info.\
+        \n{tr}help -l <commands> : for specific command info.\
         "
     await event.answer(text, cache_time=0, alert=True)
 
