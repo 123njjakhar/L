@@ -2,11 +2,11 @@ from telethon import functions
 from telethon.errors import ChatAdminRequiredError, UserAlreadyInvitedError
 from telethon.tl.types import Channel, Chat, User
 
-from Legendbot import legend
-from Legendbot.bot.core.managers import eod, eor
-from Legendbot.helpers.utils import mentionuser
+from .. import legend
+from ..bot.core.managers import eod, eor
+from ..helpers.utils import mentionuser
 
-menu_category = "extra"
+menu_category = "utils"
 
 
 async def get_group_call(chat):
