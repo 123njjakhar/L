@@ -1,9 +1,11 @@
 from telethon import functions
 from telethon.errors import ChatAdminRequiredError, UserAlreadyInvitedError
 from telethon.tl.types import Channel, Chat, User
+
 from Legendbot import legend
 from Legendbot.bot.core.managers import eod, eor
 from Legendbot.helpers.utils import mentionuser
+
 menu_category = "extra"
 
 
@@ -122,6 +124,7 @@ async def inv_vc(event):
         await eod(event, "Invited users to Group Call")
     except UserAlreadyInvitedError:
         return await eod(event, "User is Already Invited", time=20)
+
 
 @legend.legend_cmd(
     pattern="vcinv ?(.*)?",
