@@ -3,18 +3,15 @@ import os
 from pathlib import Path
 
 import lyricsgenius
+from telethon import functions
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock
+from telethon.tl.types import Channel, Chat, User
 
-from ...core.managers import eod, eor
-from ...helpers.utils import mentionuser
-from telethon import functions
-from telethon.errors import ChatAdminRequiredError, UserAlreadyInvitedError
-from telethon.tl.types import User, Channel, Chat
 from Legendbot import legend
 
 from ...Config import Config
-from ...core.managers import eor
+from ...core.managers import eod, eor
 from ..utils.utils import runcmd
 from .functions import delete_conv
 from .utube import name_dl, song_dl, video_dl
