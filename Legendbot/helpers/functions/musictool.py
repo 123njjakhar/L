@@ -6,6 +6,11 @@ import lyricsgenius
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock
 
+from ...core.managers import eod, eor
+from ...helpers.utils import mentionuser
+from telethon import functions
+from telethon.errors import ChatAdminRequiredError, UserAlreadyInvitedError
+from telethon.tl.types import User, Channel, Chat
 from Legendbot import legend
 
 from ...Config import Config
