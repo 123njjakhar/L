@@ -5,7 +5,7 @@ from pathlib import Path
 import lyricsgenius
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock
-
+from Legendbot import legend
 from ...Config import Config
 from ...core.managers import eor
 from ..utils.utils import runcmd
@@ -111,3 +111,29 @@ async def song_download(url, event, quality="128k", video=False, title=True):
         media_title = media_name.replace("./temp/", "").replace("_", "|")
         return media_file, media_thumb, media_title
     return media_file, media_thumb
+
+
+async def get_group_call(chat):
+    if isinstance(chat, Channel):
+        result = await legend(functions.channels.GetFullChannelRequest(channel=chat))
+    elif isinstance(chat, Chat):
+        result = await legend(functions.messages.GetFullChatRequest(chat_id=chat.id))
+    return result.full_chat.call
+
+
+async def chat_vc_checker(event, chat, edits=True):
+    if isinstance(chat, User):
+        await eod(event, "Voice Chats are not available in Private Chats")
+        return None
+    result = await get_group_call(chat)
+    if not result:
+        if edits:
+            await eod(event, "No Group Call in this chat")
+        return None
+    return result
+
+
+async def parse_entity(entity):
+    if entity.isnumeric():
+        entity = int(entity)
+    return await legend.get_entity(entity)
