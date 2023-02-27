@@ -5,7 +5,9 @@ from pathlib import Path
 import lyricsgenius
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock
+
 from Legendbot import legend
+
 from ...Config import Config
 from ...core.managers import eor
 from ..utils.utils import runcmd
