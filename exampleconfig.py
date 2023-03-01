@@ -22,6 +22,5 @@ class Development(Config):
     EXTERNAL_REPOBRANCH = "main"
     UPSTREAM_REPO = "pro"
     VCMODE = False
-    VC_SESSION = ""
     # Your City's TimeZone
     TZ = "Asia/Kolkata"
