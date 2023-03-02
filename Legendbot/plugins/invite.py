@@ -70,7 +70,6 @@ async def _(event):
     await eor(event, f"`{to_add_users} is/are Invited Successfully`")
 
 
-
 @legend.legend_cmd(
     pattern="inviteall ([\s\S]*)",
     command=("inviteall", menu_category),
@@ -170,4 +169,3 @@ async def get_users(event):
     return await LEGEND.edit(
         f"**《Terminal Finished》** \n\n♡ Successfully Invited `{s}` people \n♡ failed to invite `{f}` people"
     )
-
