@@ -97,10 +97,10 @@ async def help(event):
         await event.delete()
         await tgbot.send_message(
             event.chat_id,
-            message=f"Hey, I am your {bot_id}'s assistant bot.\nI Am Here To Help U \n\nPowered By [LegendBot](https://t.me/LegendBot_OP)",
+            message=f"Hey, I am your {bot_id}'s assistant bot.\nI Am Here To Help U \n\nPowered By [𓆩𝙇𝙀𝙂𝙀𝙉𝘿 ♡ 𝘼-𝙆𝘼𝙔𓆪](https://t.me/Brahman_Anand)",
             buttons=[
                 [
-                    Button.url(" Support ", "https://t.me/LegendBot_OP"),
+                    Button.url(" Support ", "https://t.me/CHATTINGxGROUP"),
                     Button.url(" Updates ", "https://t.me/LegendBot_AI"),
                 ],
                 [
@@ -111,7 +111,7 @@ async def help(event):
             ],
         )
     else:
-        await event.answer("Sorry U Cant Acces This Button", cache_time=0, alert=True)
+        await event.answer("Kyu bhdve😒😒... esko kyu chhedta h😂", cache_time=0, alert=True)
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"osg")))
@@ -124,7 +124,6 @@ async def help(event):
             buttons=[
                 [
                     custom.Button.inline(" Restart ", data="res_tart"),
-                    custom.Button.inline(" Shut Down ", data="shutdown"),
                 ],
                 [
                     custom.Button.inline(" Set Var", data="strvar"),
@@ -134,7 +133,7 @@ async def help(event):
         )
     else:
         await event.answer(
-            "Sorry Only My Master Can Access This Button", cache_time=0, alert=True
+            "Ye button... mere malik ke lie Bne h😂 plz... en button pe ungli na kre🤫", cache_time=0, alert=True
         )
 
 
