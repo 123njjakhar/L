@@ -50,7 +50,7 @@ async def amireallyalive(event):
     lal = list(EMOJI.split())
     EMOTES = random.choice(lal)
     sweetie_caption = (
-        "**⚜ LegendBot Is Online ⚜**\n\n" + f"{gvarstatus('ALIVE_TEMPLATE')}"
+        "**💓 Anand Is Online 💓**\n\n" + f"{gvarstatus('ALIVE_TEMPLATE')}"
     )
     caption = sweetie_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
@@ -76,12 +76,8 @@ async def amireallyalive(event):
 
 """
 temp = {ALIVE_TEXT}
-**{EMOTES} Master:** {mention}
-**{EMOTES} Uptime :** `{uptime}`
-**{EMOTES} Telethon Version :** `{telever}`
-**{EMOTES} Legenduserbot Version :** `{legendver}`
-**{EMOTES} Python Version :** `{pyver}`
-**{EMOTES} Database :** `{dbhealth}`
+**{EMOTES} 𓆩𝙇𝙀𝙂𝙀𝙉𝘿 ♡ 𝘼-𝙆𝘼𝙔𓆪 :** {mention}
+**{EMOTES} Stamina💦 :** `{uptime}`
 """
 
 
@@ -103,12 +99,9 @@ async def amireallyalive(event):
     a = gvarstatus("ALIVE_EMOJI") or "✥"
     kiss = list(a.split())
     EMOJI = random.choice(kiss)
-    legend_caption = "**LegendBot Is Online**\n\n"
-    legend_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
-    legend_caption += f"**{EMOJI} Legenduserbot Version :** `{legendversion}`\n"
-    legend_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
-    legend_caption += f"**{EMOJI} Uptime :** {uptime}\n"
-    legend_caption += f"**{EMOJI} Master:** {mention}\n"
+    legend_caption = "**💓 Anand Is Online 💓**\n\n"
+    legend_caption += f"**{EMOJI} Stamina💦 :** {uptime}\n"
+    legend_caption += f"**{EMOJI} 𓆩𝙇𝙀𝙂𝙀𝙉𝘿 ♡ 𝘼-𝙆𝘼𝙔𓆪 :** {mention}\n"
     results = await event.client.inline_query(Config.BOT_USERNAME, legend_caption)
     await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
     await event.delete()
@@ -122,13 +115,13 @@ file3 = "https://te.legra.ph/file/d2a5265abdc4e73af1f94.jpg"
 file4 = "https://telegra.ph/file/b6f0c65a337b1f2609d07.jpg"
 file5 = "https://telegra.ph/file/af51de2749a4506d3eb43.jpg"
 """ =======================CONSTANTS====================== """
-pm_caption = f"**LegendBot Is Up**\n"
+pm_caption = f"**Anand Is Up**\n"
 pm_caption += f"**╭────────────**\n"
 pm_caption += f"┣»»»『{mention}』«««\n"
 pm_caption += f"┣Lêɠêɳ̃dẞø† ~ {legendversion}\n"
-pm_caption += f"┣Lêɠêɳ̃d  ~ [Owner](https://t.me/Legend_K_Boy)\n"
-pm_caption += f"┣Support ~ [G𝖗ουρ](https://t.me/LegendBot_OP)\n"
-pm_caption += f"┣Řepô    ~ [Rєρο](https://github.com/LEGEND-AI/LEGENDBOT)\n"
+pm_caption += f"┣Lêɠêɳ̃d  ~ [𓆩𝙇𝙀𝙂𝙀𝙉𝘿 ♡ 𝘼-𝙆𝘼𝙔𓆪](https://t.me/pandit_Andy)\n"
+pm_caption += f"┣Support ~ [G𝖗ουρ](https://t.me/CHATTINGxGROUP)\n"
+pm_caption += f"┣Řepô    ~ [Rєρο](https://graph.org/彡ᴋɪɴɢ-ᴀɴᴀɴᴅ彡-04-01)\n"
 pm_caption += f"**╰────────────**\n"
 
 
